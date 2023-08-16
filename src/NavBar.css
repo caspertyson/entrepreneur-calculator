@@ -1,0 +1,61 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    position: fixed;  /* Fixes the navbar to the top of the viewport */
+    top: 0;           /* Aligns the navbar to the top */
+    left: 0;          /* Aligns the navbar to the left (optional if you want full width) */
+    width: 100%;      /* Ensures the navbar spans the full width of the viewport */
+    z-index: 1000;    /* Puts the navbar above other elements, assuming other z-index values are lower */
+    /* Add other styles like background-color, padding, etc. to make it visually appealing */
+    background-color: #583AAB;
+}
+.App{
+    padding-top: 150px;
+}
+body{
+    background-color: #583AAB;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+#capitalE{
+    display: inline-block;
+    width: 75px;
+    height: 70px;
+    padding-top: 3px;
+    background-color: white;
+    color: #583AAB;
+    text-align: center;
+    font-weight: 700;
+    font-size: 58px;
+    border-radius: 50%; /* This makes the div a circle */
+}
+#capitalE:hover{
+    cursor: pointer;
+}
+#capitalE:active{
+    text-decoration: none;
+}
+#navBarTitle{
+    display: flex;               /* Use Flexbox for the container */
+    align-items: center;         /* Vertically aligns children in the middle */
+    padding-left: 40px;
+    padding-top: 10px;
+}
+#navBarTitle a{
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+}
+#navBarAbout{
+    color: white;
+    font-weight: 700;
+    padding-right: 80px;
+    cursor: pointer;
+}

@@ -1,38 +1,116 @@
-.App {
+#landingPageDiv{
+  display: flex; /* Enables Flexbox for the container */
+  min-height: 100vh;
+}
+#landingPageLeft{
+  flex: 60%; /* This will take up 60% of the container's width */
+  padding-left: 70px; /* Optional spacing between text and image */
+  color: white;
+  font-size: 30px;
+}
+#landingPageLeft p{
+  font-size: 28px;
+}
+#landingPageRight{
+  flex: 40%; /* This will take up 40% of the container's width */
+  /* Ensuring the image doesn't exceed its container */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers image horizontally */
+  align-items: center; /* Centers image vertically */
+  margin-bottom: 300px;
+}
+#landingPageLeft input{
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: medium;
+  width: 400px;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+#landingPageLeft button{
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: medium;
+  color: white;
+  font-weight: 600;
+  background-color: #62E767;
+  cursor: pointer;
+}
+#landingPageLeft button:hover{
+  background-color: #62e766b1;
+}
+#secondPageDiv {
+  min-height: 100vh;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#secondPageDiv h2{
+  padding-top: 250px;
   color: white;
+  font-weight: 500;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* #percentageCalc{
+  font-size: 300px;
+  margin: 0px;
+  color: white;
+} */
+.percentage-container {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 24px; /* Adjust to your preferred size */
+  font-size: 300px;
+  margin: 0px;
+  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+#percentageCalc {
+  width: 600px; /* This will reserve enough space for up to 3 digits */
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#thirdPageDiv{
+  min-height: 100vh;
+  text-align: center;
+}
+#scrapingFishDescr{
+  color: white;
+  max-width: 500px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 200;
+}
+#thirdPageDiv p span{
+  font-weight: 600;
+}
+#howItWorksTitle{
+  padding-top: 150px;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 100px;
+  margin: 0px;
+}
+#headerThirdPage{
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+#estChanceTitle{
+  margin-top: 70px;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+#showCalculations{
+  color: white;
+  margin: auto;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 200;
 }
