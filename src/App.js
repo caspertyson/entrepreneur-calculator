@@ -9,11 +9,10 @@ function App() {
   const thirdPageRef = useRef(null);  // Create a ref for the second page div
   const firstPageRef = useRef(null);  // Create a ref for the second page div
   const [percentage, setPercentage] = useState(0);
-  const [numBusinesses, setNumBusinesses] = useState(0);
+  const [numBusinesses, setNumBusinesses] = useState("");
   const [chanceSuccess, setChanceSuccess] = useState(0);
 
   const handleScrollToSecondPage = () => {
-    console.log(chanceSuccess)
     startAnimation()
     secondPageRef.current.scrollIntoView({ behavior: 'smooth' });  // Use the ref to scroll into view
   };
@@ -25,9 +24,6 @@ function App() {
   };
 
   const handleInputChange = (event) => {
-    setNumBusinesses(0)
-    setPercentage(0)
-    setChanceSuccess(0)
     const value = event.target.value;
     
     // Use a regular expression to check if the value is a number
