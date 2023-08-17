@@ -7,9 +7,10 @@ import LightBulb from './lightbulb.png'
 function App() {
   const secondPageRef = useRef(null);  // Create a ref for the second page div
   const thirdPageRef = useRef(null);  // Create a ref for the second page div
+  const firstPageRef = useRef(null);  // Create a ref for the second page div
   const [percentage, setPercentage] = useState(0);
   const [numBusinesses, setNumBusinesses] = useState("");
-  const [chanceSuccess, setChanceSuccess] = useState("");
+  const [chanceSuccess, setChanceSuccess] = useState(0);
 
   const handleScrollToSecondPage = () => {
     startAnimation()
@@ -17,6 +18,9 @@ function App() {
   };
   const handleScrollToThirdPage = () => {
     thirdPageRef.current.scrollIntoView({ behavior: 'smooth' });  // Use the ref to scroll into view
+  };
+  const handleScrollToFirstPage = () => {
+    firstPageRef.current.scrollIntoView({ behavior: 'smooth' });  // Use the ref to scroll into view
   };
 
   const handleInputChange = (event) => {
@@ -26,13 +30,13 @@ function App() {
     if (/^\d*$/.test(value)) {
       setNumBusinesses(value);
 
-      let chanceOfFailure = Math.pow(0.95, value); 
+      let chanceOfFailure = Math.pow(0.95, value + 1); 
       let chanceOfSuccess = (1 - chanceOfFailure)*100
       let rounded = Math.round(chanceOfSuccess * 10) / 10;  
 
       setChanceSuccess(rounded);
     }
-};
+  };
 
   let totalDuration = 0;
   const maxDuration = 3000;
@@ -60,12 +64,12 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" ref={firstPageRef}>
         <div className="navbar">
-            <div id='navBarTitle'>
+            <div id='navBarTitle' onClick={handleScrollToFirstPage}>
                 <div id='capitalE'>E
                 </div>
-                <a href="/">EntrepreneurCalculator.online</a>
+                <a >EntrepreneurCalculator.online</a>
             </div>
             <div id='navBarRightSide'>
                 <a id='navBarAbout' onClick={handleScrollToThirdPage}>How It Works?</a>
@@ -76,7 +80,7 @@ function App() {
             <h1>Count your launches. <br></br>Calculate your success.</h1>
             <p>Venturing into a new business? Discover if your next endeavour has the potential to strike gold!</p>
             <input
-              placeholder='Enter Your Number of Past Businesses Here...'
+              placeholder='Number of Past Businesses Here...'
               type='text'
               value={numBusinesses}
               onChange={handleInputChange}
@@ -84,7 +88,7 @@ function App() {
             <button onClick={handleScrollToSecondPage}>Calculate Success Chances</button>
           </div>
           <div id='landingPageRight'>
-            <img src={LightBulb}></img>
+            <img src={LightBulb} alt='Image of a lightbulb'></img>
           </div>
         </div>
         <div id="secondPageDiv" ref={secondPageRef}>

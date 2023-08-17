@@ -10,15 +10,18 @@
 }
 #landingPageLeft p{
   font-size: 28px;
+  line-height: 45px;
+  max-width: 800px;
 }
 #landingPageRight{
   flex: 40%; /* This will take up 40% of the container's width */
   /* Ensuring the image doesn't exceed its container */
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center; /* Centers image horizontally */
-  align-items: center; /* Centers image vertically */
-  margin-bottom: 300px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 #landingPageLeft input{
   border: none;
@@ -27,7 +30,7 @@
   font-size: medium;
   width: 400px;
   margin-right: 20px;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 #landingPageLeft button{
   padding: 20px;
@@ -38,6 +41,7 @@
   font-weight: 600;
   background-color: #62E767;
   cursor: pointer;
+  margin-top: 20px;
 }
 #landingPageLeft button:hover{
   background-color: #62e766b1;
@@ -45,24 +49,21 @@
 #secondPageDiv {
   min-height: 100vh;
   text-align: center;
+
 }
 #secondPageDiv h2{
-  padding-top: 250px;
+  padding-top: 150px;
   color: white;
   font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 html {
   scroll-behavior: smooth;
 }
-/* #percentageCalc{
-  font-size: 300px;
-  margin: 0px;
-  color: white;
-} */
 .percentage-container {
   display: inline-flex;
   align-items: baseline;
-  font-size: 24px; /* Adjust to your preferred size */
   font-size: 300px;
   margin: 0px;
   color: white;
@@ -77,6 +78,8 @@ html {
 #thirdPageDiv{
   min-height: 100vh;
   text-align: center;
+  padding: 10px;
+  padding-bottom: 100px;
 }
 #scrapingFishDescr{
   color: white;
@@ -100,12 +103,14 @@ html {
   color: white;
   font-weight: 700;
   font-size: 40px;
+  margin-bottom: 10px;
 }
 #estChanceTitle{
-  margin-top: 70px;
+  margin-top: 20px;
   color: white;
   font-weight: 700;
   font-size: 40px;
+  margin-bottom: 10px;
 }
 #showCalculations{
   color: white;
@@ -113,4 +118,33 @@ html {
   font-size: 20px;
   line-height: 45px;
   font-weight: 200;
+}
+@media (max-width: 830px) {
+  #landingPageRight {
+    display: none;
+  }
+  #landingPageLeft{
+    flex: 100%; /* This will take up 60% of the container's width */
+    padding-left: 35px; /* Optional spacing between text and image */
+    font-size: 15px;
+  }
+  #landingPageLeft p{
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 80%;
+  }
+  .percentage-container {
+    font-size: 100px;
+    display: block;
+  }
+  #landingPageLeft input{
+    width: 80%;
+  }
+  #landingPageLeft button{
+    display: block;
+
+  }
+  #secondPageDiv h2{
+    padding-top: 120px;
+  }  
 }
