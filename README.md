@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# EntrepreneurCalculator.online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+EntrepreneurCalculator.online is an innovative tool designed to assist entrepreneurs in evaluating the 
+potential success of their upcoming business ventures. By analyzing the number of past businesses and 
+using data-driven insights, this calculator provides an estimated success chance for new endeavors. 
+Our aim is to empower entrepreneurs with knowledge and confidence as they venture into new business 
+opportunities.
 
-## Available Scripts
+## How It Works
+The calculator operates on a simple yet powerful principle derived from market analysis data. 
+According to research conducted by ScrapingFish.com on IndieHackers.com, only around 5% of the 
+products analyzed generate a monthly revenue exceeding $8,333 (approximately $100,000/year). Based on 
+this statistic, the Entrepreneur Calculator estimates the chances of success for your next business 
+using the following formula:
 
-In the project directory, you can run:
+- **Chance Of Failure** = (0.95)^(Number Of Businesses You’ve Had)
+- **Chance Of Success** = 1 - Chance of Failure
 
-### `npm start`
+Simply enter the number of past businesses you've had to calculate the success chances of your next 
+venture.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- **Success Chance Calculation**: Provides an estimated success chance for your next business venture.
+- **User-friendly Interface**: Easy-to-use web interface with a clear and intuitive design.
+- **Data-driven Insights**: Utilizes statistical analysis to inform the success chance calculation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+It is accessible online at [EntrepreneurCalculator.online](https://entrepreneurcalculator.online).
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
